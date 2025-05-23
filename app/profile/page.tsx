@@ -7,7 +7,7 @@ import Image from "next/image";
 import toast, { Toaster } from "react-hot-toast";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { availablePlans, Plan } from "@/lib/plans";
+import { availablePlans } from "@/lib/plans";
 
 async function fetchSubscriptionStatus() {
   const response = await fetch("/api/profile/subscription-status");
@@ -49,7 +49,7 @@ export default function Profile() {
   });
 
   const {
-    data: canceledPlan,
+    
     mutate: unsubscribeMutation,
     isPending: isUnsubscribePending,
   } = useMutation({
@@ -64,7 +64,7 @@ export default function Profile() {
   });
 
   const {
-    data: updatedPlan,
+    
     mutate: updatePlanMutation,
     isPending: isUpdatePlanPending,
   } = useMutation({

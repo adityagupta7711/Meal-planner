@@ -1,0 +1,7 @@
+# Ignore all generated Prisma files
+app/generated/prisma/**
+
+# You can add other patterns to ignore as needed
+# node_modules
+# dist
+# build
